@@ -1,0 +1,11 @@
+{
+	"item-notouch-lantern-entity": "Lantern of Protection (entities, silver)",
+	"item-notouch-lantern-block": "Lantern of Protection (blocks, large gold)",
+	"item-notouch-lantern-existent": "Lantern of Protection (existent, bismuth)",
+	"item-notouch-existent-stick": "Stick of Existent Protection",
+	"itemdesc-notouch-lantern-entity": "Creative. Keep the entity totem in the off-hand or main hand. The other hand is used to spawn or place (e.g. inventory, /entity). Within about 20 blocks, that new spawn is server-protected and shows notouch in entity data. Use may still do dialogue; notouch does not add block break rules.",
+	"itemdesc-notouch-lantern-block": "Creative. Hold the block totem in the off-hand or main hand, place the block with the other hand. The placed block is protected (break and pickup for BuildOrBreak are denied).",
+	"itemdesc-notouch-lantern-existent": "Creative. Hold Shift and use (right-click). Works in two poses: (1) existent in one hand, other hand empty, or (2) existent in left hand + Stick of Existent Protection in right hand. It stamps the aimed block/entity; same action removes protection. No distance cap on toggling.",
+	"itemdesc-notouch-existent-stick": "Creative helper item (not placeable, never consumed). Pair with the Existent Lantern in left hand and hold Shift + right-click to stamp/remove No Touch on aimed blocks/entities.",
+	"custommessage-notouch-protected": "I cannot build or destroy here. It is protected (No Touch Items)."
+}

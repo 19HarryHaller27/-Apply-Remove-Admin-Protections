@@ -1,0 +1,34 @@
+{
+	code: "notouch-existent-stick",
+	class: "ItemExistentPartnerStick",
+	shape: { base: "game:item/stick" },
+	textures: { stick: { base: "game:item/resource/stick" } },
+	attributes: { notouchKind: "existentpartner" },
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	maxstacksize: 1,
+	storageFlags: 257,
+	materialDensity: 450,
+	attackRange: 2.5,
+	combustibleProps: {
+		burnTemperature: 700,
+		burnDuration: 8
+	},
+	guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -53, y: 91, z: -9 },
+		origin: { x: 0.58, y: 0.19, z: 0.44 },
+		scale: 2.11
+	},
+	tpHandTransform: {
+		translation: { x: -1.22, y: 0.06, z: -0.89 },
+		rotation: { x: -6, y: 30, z: 18 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.59
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 5
+	}
+}

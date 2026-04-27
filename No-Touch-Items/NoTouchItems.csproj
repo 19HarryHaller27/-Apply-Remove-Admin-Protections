@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>notouchitems</AssemblyName>
+    <RootNamespace>NoTouchItems</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="VintagestoryAPI">
+      <HintPath>$(VintageStoryPath)\VintagestoryAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <NoTouchAssetFiles Include="$(MSBuildThisFileDirectory)assets\**\*" />
+  </ItemGroup>
+
+  <Target Name="DeployNoTouch" AfterTargets="Build">
+    <PropertyGroup>
+      <_Out>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</_Out>
+      <_VsMods>$(UserProfile)\AppData\Roaming\VintagestoryData\Mods\notouchitems</_VsMods>
+    </PropertyGroup>
+    <MakeDir Directories="$(_Out);$(_VsMods)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(_Out)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(_VsMods)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)modinfo.json" DestinationFolder="$(_Out)" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)modinfo.json" DestinationFolder="$(_VsMods)" />
+    <Copy SourceFiles="@(NoTouchAssetFiles)"
+          DestinationFiles="@(NoTouchAssetFiles->'$(_Out)assets\%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="false" />
+    <Copy SourceFiles="@(NoTouchAssetFiles)"
+          DestinationFiles="@(NoTouchAssetFiles->'$(_VsMods)\assets\%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="false" />
+    <Copy SourceFiles="$(TargetDir)$(TargetName).pdb" DestinationFolder="$(_Out)" Condition="Exists('$(TargetDir)$(TargetName).pdb')" />
+    <Copy SourceFiles="$(TargetDir)$(TargetName).pdb" DestinationFolder="$(_VsMods)" Condition="Exists('$(TargetDir)$(TargetName).pdb')" />
+  </Target>
+</Project>

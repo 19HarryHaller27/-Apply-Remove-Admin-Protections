@@ -1,0 +1,36 @@
+{
+	code: "notouch-lantern-block",
+	class: "ItemProtectionLantern",
+	attributes: { notouchKind: "block" },
+	tags: ["notouch", "notouch-totem"],
+	storageFlags: 257,
+	heldRightTpIdleAnimation: "holdinglanternrighthand",
+	heldLeftTpIdleAnimation: "holdinglanternlefthand",
+	maxstacksize: 1,
+	lightHsv: [8, 5, 24],
+	shape: { base: "game:block/metal/lantern/large/ground" },
+	textures: { all: { base: "game:block/metal/lantern/gold" } },
+	guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -48, y: 35, z: 12 },
+		origin: { x: 0.5, y: 0.1, z: 0.5 },
+		scale: 2.0
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2.8
+	},
+	tpHandTransform: {
+		translation: { x: -0.62, y: -0.84, z: -0.93 },
+		rotation: { x: 0, y: 7, z: -90 },
+		scale: 0.55
+	},
+	tpOffHandTransform: {
+		translation: { x: 0.48, y: -0.84, z: -0.9 },
+		rotation: { x: 0, y: 175, z: -90 },
+		scale: 0.5
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "decorative": ["*"] }
+}

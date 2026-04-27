@@ -1,0 +1,11 @@
+{
+  "type": "code",
+  "modid": "notouchitems",
+  "name": "No Touch Items",
+  "authors": ["adams"],
+  "description": "Creative-only: totems + right-clicks/place. Optional /nt protect|noprotect (under /nt) for future spawn rules; /nt* is mod diagnostics. Alt+P shows id paths. Stops break and BuildOrBreak pickup when protected.",
+  "version": "0.1.31",
+  "dependencies": {
+    "game": "1.22.0"
+  }
+}
